@@ -1,15 +1,36 @@
 [tool.poetry]
 name = "poetry_tutorial_project"
 version = "0.1.0"
-description = ""
-authors = ["Larry Jones <larry.jones@reveal-energy.com>"]
+description = "A tutorial for poetry from https://hackersandslackers.com/python-poetry-package-manager/."
+authors = ["Larry Jones <mrwizard82d1@gmail.com>"]
+maintainers = ["Larry Jones <mrwizard82d1@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = ""
+repository = "https://github.com/mrwizard82d1/poetry_tutorial_project"
+documentation = "https://github.com/mrwizard82d1/poetry_tutorial_project"
+keywords = ["Poetry",
+            "Virtual Environments",
+            "Tutorial",
+            "Packages",
+            "Packaging"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
+loguru = "*"
+psutil = "*"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
+pytest = "*"
 
 [build-system]
 requires = ["poetry>=0.12"]
 build-backend = "poetry.masonry.api"
+
+[tool.poetry.scripts]
+# The `run` "command" will invoke the function `main` in the module `wsgi` (`wsgi.py`).
+# Execute this cammond from the shell by typing `poetry run`.
+run = "wsgi:main"
+
+[tool.poetry.urls]
+issues = "https://github.com/mrwizard82d1/poetry_tutorial_project/issues"
